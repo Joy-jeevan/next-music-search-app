@@ -1,73 +1,75 @@
-# next-music-search
+# Next Music Search APP
 
-## Overview
-next-music-search is a full-stack application built with React for the client-side and Node.js for the server-side. This project allows users to search for music tracks and view the results in a user-friendly interface.
+A web application to search for music on iTunes using the iTunes Search API.
 
-## Project Structure
-The project is organized into two main directories: `client` and `server`.
+## Tech Stack
 
-### Client
-The client-side application is built using React and TypeScript. It includes the following key files:
-- **package.json**: Configuration file for the client-side application, listing dependencies and scripts.
-- **tsconfig.json**: TypeScript configuration for the client-side application.
-- **public/index.html**: The main HTML file that serves the React application.
-- **src/App.tsx**: The main component of the React application.
-- **src/index.tsx**: The entry point for the React application.
+### Frontend
+- **React**: UI library for building the interface.
+- **Redux Toolkit**: State management for search results and query state.
+- **TypeScript**: Static typing for better code quality and developer experience.
+- **Material UI**: Component library for styled and accessible UI elements.
+- **Styled Components**: For custom component styling.
 
-### Server
-The server-side application is built using Node.js and TypeScript. It includes the following key files:
-- **package.json**: Configuration file for the server-side application, listing dependencies and scripts.
-- **tsconfig.json**: TypeScript configuration for the server-side application.
-- **src/index.ts**: The entry point for the server application, setting up the Express server.
-- **src/routes/api.ts**: Defines API routes for searching music tracks.
-- **src/types/index.ts**: TypeScript types and interfaces used in the server-side application.
+### Backend
+- **Node.js**: Runtime environment.
+- **Express**: Web framework for handling API requests.
+- **TypeScript**: Static typing for the server code.
 
-## Getting Started
+## Prerequisites
 
-### Prerequisites
-- Node.js (version 14 or higher)
-- npm (Node package manager)
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/)
 
-### Installation
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd next-music-search
-   ```
+## Installation
 
-2. Install dependencies for the client:
-   ```
-   cd client
-   npm install
-   ```
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd itunes-search-app
+    ```
 
-3. Install dependencies for the server:
-   ```
-   cd ../server
-   npm install
-   ```
+2.  **Install Server Dependencies:**
+    ```bash
+    cd server
+    npm install
+    ```
 
-### Running the Application
-1. Start the server:
-   ```
-   cd server
-   npm start
-   ```
+3.  **Install Client Dependencies:**
+    ```bash
+    cd ../client
+    npm install
+    ```
 
-2. Start the client:
-   ```
-   cd client
-   npm start
-   ```
+## Running the Application
 
-The client application will be available at `http://localhost:3001` and the server will be running on `http://localhost:3000`.
+1.  **Start the Backend Server:**
+    From the `server` directory:
+    ```bash
+    npm run dev
+    ```
+    The server will start on `http://localhost:3000` (or the port specified in your environment).
 
-## Usage
-- Use the search bar to input music track queries.
-- View the list of tracks returned from the search.
+2.  **Start the Frontend Development Server:**
+    From the `client` directory:
+    ```bash
+    npm start
+    ```
+    The application will open in your browser at `http://localhost:3001` (or the next available port).
 
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or features.
+## Testing
 
-## License
-This project is licensed under the MIT License.
+To run the frontend unit tests:
+
+```bash
+cd client
+npm test
+```
+
+## Features
+
+-   **Search**: Search for music tracks, artists, and albums using the iTunes API.
+-   **Music Only**: The search is automatically filtered to return only music results (handled by the backend).
+-   **Clear Input**: Easily clear the search text with a single click.
+-   **Reset**: Reset the search results and input field to their initial state.
+-   **Pagination**: Load more results as you scroll or request them.
