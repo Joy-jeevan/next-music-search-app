@@ -32,7 +32,6 @@ const SearchForm: React.FC = () => {
   return (
     <Box component="form" onSubmit={handleSubmit} sx={{ display: 'flex', justifyContent: 'center', p: 3, position: 'sticky', top: 0, zIndex: 100, bgcolor: 'background.default', borderBottom: 1, borderColor: 'divider' }}>
       <TextField
-        label="Search"
         aria-label="Search for artists, albums, or songs"
         placeholder="Search for artists, albums, or songs..."
         fullWidth
