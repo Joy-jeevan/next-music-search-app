@@ -15,7 +15,7 @@ const ResultItem: React.FC<ResultItemProps> = ({ item }) => {
   const id = item.trackId || item.collectionId || item.artistId;
 
   return (
-    <Link to={`/result/${id}`} style={{ textDecoration: 'none' }}>
+    <Link to={`/result/${id}`} style={{ textDecoration: 'none' }} aria-label={`View details for ${title}`} >
       <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', borderRadius: 0, boxShadow: 'none', border: '1px solid #eee', '&:hover': { boxShadow: '0 4px 20px rgba(0,0,0,0.1)' } }}>
         <Box sx={{ position: 'relative', paddingTop: '100%' }}>
           {image ? (
